@@ -1,0 +1,108 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <world name='ebu6350_maze_world'>
+    <include><uri>model://sun</uri></include>
+    <gravity>0 0 -9.8</gravity>
+
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'><geometry><plane><normal>0 0 1</normal><size>1.8 1.8</size></plane></geometry></collision>
+        <visual name='visual'>
+          <geometry><plane><normal>0 0 1</normal><size>1.8 1.8</size></plane></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/White</name></script></material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name='Walls_Container'>
+        <static>true</static>
+        
+        <link name='wall_AC'>
+            <visual name='v'><geometry><box><size>0.05 1.8 0.1</size></box></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+            <collision name='c'><geometry><box><size>0.05 1.8 0.1</size></box></geometry></collision>
+            <pose>-0.025 0.9 0.05 0 0 0</pose> 
+        </link>
+        
+        <link name='wall_DB'>
+            <visual name='v'><geometry><box><size>0.05 1.8 0.1</size></box></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+            <collision name='c'><geometry><box><size>0.05 1.8 0.1</size></box></geometry></collision>
+            <pose>1.825 0.9 0.05 0 0 0</pose> 
+        </link>
+        
+        <link name='wall_AB'>
+            <visual name='v'><geometry><box><size>1.8 0.05 0.1</size></box></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+            <collision name='c'><geometry><box><size>1.8 0.05 0.1</size></box></geometry></collision>
+            <pose>0.9 -0.025 0.05 0 0 0</pose> 
+        </link>
+        
+        <link name='wall_CD'>
+            <visual name='v'><geometry><box><size>1.8 0.05 0.1</size></box></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+            <collision name='c'><geometry><box><size>1.8 0.05 0.1</size></box></geometry></collision>
+            <pose>0.9 1.825 0.05 0 0 0</pose> 
+        </link>
+    </model>
+
+    <model name='Hard_Obstacle_AEFG'>
+        <pose>0.225 0.225 0.05 0 0 0</pose> <static>true</static>
+        <link name='link'>
+            <collision name='collision'>
+                <geometry><box><size>0.45 0.45 0.1</size></box></geometry>
+            </collision>
+            <visual name='visual'>
+                <geometry><box><size>0.45 0.45 0.1</size></box></geometry>
+                <material><script><name>Gazebo/Red</name></script></material> </visual>
+        </link>
+    </model>
+
+    <model name='Soft_Obstacles_Lines'>
+        <static>true</static>
+        
+        <link name='line_HI'>
+            <visual name='v'><geometry><box><size>0.01 1.0 0.001</size></box></geometry><material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material></visual>
+            <collision name='c'><geometry><box><size>0.01 1.0 0.001</size></box></geometry></collision>
+            <pose>0.45 1.3 0.0005 0 0 0</pose> 
+        </link>
+        
+        <link name='line_KN'>
+            <visual name='v'><geometry><box><size>0.01 1.4 0.001</size></box></geometry><material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material></visual>
+            <collision name='c'><geometry><box><size>0.01 1.4 0.001</size></box></geometry></collision>
+            <pose>0.9 0.7 0.0005 0 0 0</pose> 
+        </link>
+        
+        <link name='line_ML'>
+            <visual name='v'><geometry><box><size>0.01 1.35 0.001</size></box></geometry><material><ambient>0 0 1 1</ambient><diffuse>0 0 1 1</diffuse></material></visual>
+            <collision name='c'><geometry><box><size>0.01 1.35 0.001</size></box></geometry></collision>
+            <pose>1.35 1.125 0.0005 0 0 0</pose> 
+        </link>
+    </model>
+
+    <!-- <include>
+      <uri>model://yahboom_microros_car</uri>
+      <pose>0.9 0.9 0.05 0 0 0</pose>
+    </include> -->
+    
+    <model name='Start_Mark'>
+        <pose>0.25 1.65 0.001 0 0 0</pose>
+        <static>true</static>
+        <link name='link'>
+            <visual name='v'>
+                <geometry><box><size>0.4 0.3 0.001</size></box></geometry>
+                <material><ambient>1 0 0 0.5</ambient><diffuse>1 0 0 0.5</diffuse></material>
+            </visual>
+        </link>
+    </model>
+
+    <model name='End_Mark'>
+        <pose>1.6 1.65 0.001 0 0 0</pose>
+        <static>true</static>
+        <link name='link'>
+            <visual name='v'>
+                <geometry><box><size>0.4 0.3 0.001</size></box></geometry>
+                <material><ambient>1 0 0 0.5</ambient><diffuse>1 0 0 0.5</diffuse></material>
+            </visual>
+        </link>
+    </model>
+
+  </world>
+</sdf>
