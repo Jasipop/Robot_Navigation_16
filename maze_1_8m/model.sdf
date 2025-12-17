@@ -4,11 +4,6 @@
     <static>true</static>
     <pose>0 0 0 0 0 0</pose>
 
-    <!-- ========================================= -->
-    <!--           HARD OBSTACLES (WALLS)          -->
-    <!--           Has Collision & Visual          -->
-    <!-- ========================================= -->
-
     <!-- Wall Settings: Height 0.3m, Thickness 0.02m -->
     
     <!-- 1. Bottom Wall (A-B): (0,0) to (18,0) -> Length 1.8m -->
@@ -148,12 +143,6 @@
         </material>
       </visual>
     </link>
-
-
-    <!-- ========================================= -->
-    <!--        SOFT OBSTACLES (BLUE LINES)        -->
-    <!--        Visual ONLY (No Collision)         -->
-    <!-- ========================================= -->
     
     <!-- Settings: Z=0.001 (Just above ground), Thickness 0.02m -->
 
@@ -285,10 +274,6 @@
       </visual>
     </link>
 
-    <!-- ========================================= -->
-    <!--           START / END MARKERS             -->
-    <!-- ========================================= -->
-
     <!-- START ZONE: Approx Center(1.6, 0.15) -->
     <link name='marker_start'>
       <pose>1.6 0.15 0.001 0 0 0</pose>
@@ -323,3 +308,4 @@
 
   </model>
 </sdf>
+
