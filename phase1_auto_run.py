@@ -79,7 +79,6 @@ def main():
     else:
         print(">>> Spin rejected (likely due to excessive expansion radius), attempting direct navigation....")
 
-    # --- 步骤 D: 导航 ---
     goal_pose = PoseStamped()
     goal_pose.header.frame_id = 'map'
     goal_pose.header.stamp.sec = 0
@@ -105,4 +104,5 @@ def main():
     rclpy.shutdown()
 
 if __name__ == '__main__':
+
     main()
