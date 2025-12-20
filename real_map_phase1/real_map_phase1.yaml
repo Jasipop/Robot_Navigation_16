@@ -1,4 +1,4 @@
-image: yahboom_map.pgm
+image: real_map_phase1.pgm
 mode: trinary
 resolution: 0.05
 origin: [-10, -10, 0]
