@@ -118,7 +118,7 @@ def main():
         end_pose.header.stamp = navigator.get_clock().now().to_msg()
         end_pose.pose.position.x = 0.8
         end_pose.pose.position.y = 1.6
-        end_pose.pose.orientation = euler_to_quaternion(1.57) # 朝向上方 (90度)
+        end_pose.pose.orientation = euler_to_quaternion(1.57)
 
         print(f">>> [Phase 2] Planning path to END (Avoiding Blue Lines)...")
         navigator.goToPose(end_pose)
@@ -142,3 +142,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
