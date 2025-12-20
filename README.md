@@ -38,14 +38,4 @@ Below is a detailed breakdown of the files and directories included in this proj
 
 ---
 
-## ⚡ Quick Start Guide
 
-### 1. Running the Simulation
-To test the robot in the Gazebo environment:
-
-```bash
-# Terminal 1: Launch the simulation world
-ros2 launch <your_package_name> simulation.launch.py
-
-# Terminal 2: Run the autonomous navigation script
-python3 phase1_auto_run.py
