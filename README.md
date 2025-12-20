@@ -38,4 +38,13 @@ Below is a detailed breakdown of the files and directories included in this proj
 
 ---
 
+## 🛠️ Dependencies
+*   **ROS 2 Humble Hawksbill**
+*   **Navigation2 (Nav2)** Stack
+*   **Gazebo** Simulator
+*   **MicroROS** Agent
 
+---
+
+*Project for Queen Mary University of London (QMUL) - EBU6350 Cognitive Robotic Systems.*
+```
