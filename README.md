@@ -1,4 +1,3 @@
-# Robot_Navigation_16
 # 🤖 Autonomous Robot Maze Navigation
 
 ![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros&logoColor=white)
